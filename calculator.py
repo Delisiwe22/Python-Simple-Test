@@ -7,7 +7,10 @@ def addition(a, b):
     Returns:
         int or float: The sum of a and b.
     """
-    return ""
+    sum_of = a + b
+    return sum_of
+print(addition(7.5, 5))
+
 
 def subtraction(a, b):
     """
@@ -18,7 +21,9 @@ def subtraction(a, b):
     Returns:
         int or float: The result of a - b.
     """
-    return ""
+    difference = a - b
+    return difference
+print(subtraction(4, 65))
 
 def multiplication(a, b):
     """
@@ -29,7 +34,9 @@ def multiplication(a, b):
     Returns:
         int or float: The product of a and b.
     """
-    return ""
+    times = a * b
+    return times
+print(multiplication(16, 7))
 
 def division(a, b):
     """
@@ -40,7 +47,9 @@ def division(a, b):
     Returns:
         float: The result of a / b.
     """
-    return ""
+    divide = a / b
+    return divide
+print(division(78, 45))
 
 def modulus(a, b):
     """
@@ -51,7 +60,9 @@ def modulus(a, b):
     Returns:
         int or float: The remainder after division.
     """
-    return ""
+    rem = divmod(a, b)
+    return rem[1]
+print(modulus(15, 10))
 
 def exponentiation(a, b):
     """
@@ -62,7 +73,9 @@ def exponentiation(a, b):
     Returns:
         int or float: The result of a ** b.
     """
-    return ""   
+    expo = a ** b
+    return expo
+print(exponentiation(5, 2))  
 
 def floor_division(a, b):
     """
@@ -73,7 +86,9 @@ def floor_division(a, b):
     Returns:
         int: The result of a // b.
     """
-    return ""
+    floor = divmod(a, b)
+    return floor[0]
+print(floor_division(25, 5))
 
 def calculator(num1, operation, num2):
     """
@@ -87,8 +102,23 @@ def calculator(num1, operation, num2):
     Example:
         result = calculator(5, '+', 3)  # Returns 8
     """
-   
-   
-    return ""
-    
-
+    if operation == "+":
+        answer =  num1 + num2
+    elif operation == "-":
+        answer = num1 - num2
+    elif operation == "*":
+        answer = num1 * num2
+    elif operation == "/":
+        answer = num1 / num2
+    elif operation == "%":
+        x = divmod(num1, num2)
+        answer = x[1]
+    elif operation == "**":
+        answer = num1 ** num2
+    elif operation == "//":
+        x = divmod(num1, num2)
+        answer = x[0] 
+    else:
+        print("Calculation invalid. Try again!")
+    return answer
+print(calculator(5, "**", 4))
